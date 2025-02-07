@@ -4,7 +4,7 @@ import path from "path";
 
 // Get the correct extension root dynamically
 const extensionPreferences = getPreferenceValues();
-const EXTENSION_NAME = extensionPreferences.extensionName || "crickets"; // ✅ Adjust if needed
+const EXTENSION_NAME = extensionPreferences.extensionName || "crickets";
 
 const BUNDLED_FILE = path.resolve(__dirname, "../assets/crickets.mp3"); // Development mode
 const INSTALLED_FILE = path.join(
