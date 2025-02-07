@@ -28,7 +28,7 @@ export default async function Command() {
       }
     });
 
-    await showHUD("🐛 Playing cricket sounds...");
+    await showHUD("🐛🎶 Playing cricket sounds... ");
   } catch (error) {
     console.error("Error:", error);
     showToast({ style: Toast.Style.Failure, title: "Error", message: String(error) });
