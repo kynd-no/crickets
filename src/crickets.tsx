@@ -9,13 +9,11 @@ const EXTENSION_NAME = extensionPreferences.extensionName || "crickets";
 const BUNDLED_FILE = path.resolve(__dirname, "../assets/crickets.mp3"); // Development mode
 const INSTALLED_FILE = path.join(
   process.env.HOME || "",
-  `.config/raycast/extensions/${EXTENSION_NAME}/assets/crickets.mp3`
+  `.config/raycast/extensions/${EXTENSION_NAME}/assets/crickets.mp3`,
 ); // Installed mode
 
 // Choose the correct file based on whether it's in development or installed
-const SOUND_FILE = BUNDLED_FILE.includes("repos/raycast")
-  ? BUNDLED_FILE
-  : INSTALLED_FILE;
+const SOUND_FILE = BUNDLED_FILE.includes("repos/raycast") ? BUNDLED_FILE : INSTALLED_FILE;
 
 export default async function Command() {
   try {
